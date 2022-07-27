@@ -159,8 +159,8 @@
 
  .nav-item:hover,
  .nav-item:focus,
- .header-contacts-flex:hover,
- .header-contacts-flex:focus
+ .contacts:hover,
+ .contacts:focus
  {
    color: var(--background-focus-button);
  } 
@@ -185,17 +185,20 @@
 
  .contacts
  {
+   display: flex;
+   align-items: center;
+
    font-weight: 500;
    font-size: 14px;
    line-height: 1.14;
    letter-spacing: 0.02em;
    padding-top: 32px;
    padding-bottom: 32px;
-   margin-left: 10px;
+  
  }
 
  .contacts-icon {
-   
+   margin-right: 10px;
    fill: currentColor;
  }
 
@@ -418,6 +421,7 @@ border-radius: 0px 0px 4px 4px;
 
 .teammates-block{
    padding-top: 30px;
+   padding-bottom: 30px;
 }
 .teammates-name
 {
@@ -444,12 +448,7 @@ border-radius: 0px 0px 4px 4px;
 
 
 
-.button:hover ,
-.button:focus
-{
-   fill: var(--background-titles-item);
-   background-color: var(--background-focus-button);
-}
+
  
 .clients-header{
    font-weight: 700;
@@ -469,27 +468,28 @@ border-radius: 0px 0px 4px 4px;
 .clients-link {
    width: 170px;
    height: 92px;
-   padding-right: 32px;
-   padding-left: 32px;
+   
 
    display:flex;
    justify-content: center;
    align-items: center;
 
-
+   color: var(--clients-color);
    border: 1px solid #AFB1B8;
    border-radius: 4px;
    }
 
    .client-icon{
-      fill:var(--clients-color);
+      fill:currentColor;
       
    }
+   
 
-   .clients-item :hover , 
-   .clients-item :focus {
-      fill:var(--hover-links-background);
+   .clients-link:hover , 
+   .clients-link:focus {
+      color:var(--hover-links-background);
       border-color: var(--hover-links-background);
+     
       
       
       
@@ -500,12 +500,19 @@ border-radius: 0px 0px 4px 4px;
  /* _______________________Portfolio */
  .example-button{
    background: var(--background-button);
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   
    border-radius: 4px;
 
    padding: 6px 22px;
    }
 
+   .example-button:hover ,
+   .example-button:focus
+{
+   color: var(--background-titles-item);
+   background-color: var(--background-focus-button);
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 
  .example-menu{
@@ -524,14 +531,18 @@ border-radius: 0px 0px 4px 4px;
 
 .titles-item
  {
-   background: var(--background-titles-item);
-   /* border: 1px solid #EEEEEE; */
+   
    flex-basis: calc((100% - 60px) /3 ) ;
-   cursor: pointer;
+   
  }
 
- .titles-item:hover ,
- .titles-item:focus {
+ .titles-link{
+   display: block;
+   background: var(--background-titles-item);
+   cursor: pointer;
+ }
+ .titles-link:hover ,
+ .titles-link:focus {
 
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
@@ -578,9 +589,9 @@ border-radius: 0px 0px 4px 4px;
    gap: 10px;
 
    margin-top: 16px;
-   padding-bottom: 30px;
   
  }
+
 
 .social-links 
 {
@@ -590,13 +601,16 @@ border-radius: 0px 0px 4px 4px;
    width: 44px;
    height: 44px;
    border-radius: 50%;
-   fill:currentColor;
+   color:var(--clients-color) ;
 }
+.social-icons{
+   fill: currentColor;
+ }
 
 .social-links:focus , 
 .social-links:hover {
    
-   fill: var(--hover-links);
+   color: var(--hover-links);
    background-color:var(--hover-links-background);
 }
  /* _____________________________________footer */
@@ -669,9 +683,10 @@ border-radius: 0px 0px 4px 4px;
 
  .footer-flex {
    display: flex;
+   align-items: baseline;
  }
  .social-block{
-   padding-top: 12px;
+   
    margin-left: 70px;
  }
 
@@ -686,7 +701,7 @@ border-radius: 0px 0px 4px 4px;
 }
 
 footer .social-links{
-   fill: #FFFFFF;
+   color: #FFFFFF;
    background: rgba(255, 255, 255, 0.1);
 }
 
